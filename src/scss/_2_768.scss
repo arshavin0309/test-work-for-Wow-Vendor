@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .header {
+        &__info {
+            justify-content: center;
+        }
+        &__address {
+            display: none;
+        }
+        &__nav {
+            display: none;
+        }
+        &__list {
+            display: none;
+        }
+    }
+}
