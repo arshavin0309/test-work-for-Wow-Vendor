@@ -33,6 +33,30 @@ button {
     cursor: pointer;
 }
 
+.grey-star {
+    width: 12px;
+    height: 12px;
+    fill: #EAECF0;
+}
+
+.gold-star {
+    width: 12px;
+    height: 12px;
+    fill: #FEC84B;
+}
+
+.half-star {
+    width: 12px;
+    height: 12px;
+
+    path:nth-child(1) {
+        fill: #FEC84B;
+    }
+    path:nth-child(2) {
+        fill: #EAECF0;
+    }
+}
+
 .main {
     background-color: #E5E5E5;
 }
@@ -229,6 +253,7 @@ button {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
         grid-gap: 16px;
+        margin-bottom: 30px;
     }
     &__label {
         display: flex;
@@ -250,7 +275,198 @@ button {
             color: #98A2B3;
         }
     }
-    &__search {
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__tag {
+        position: relative;
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        padding-right: 45px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #7F56D9;
+        background-color: #F4EBFF;
+        border-radius: 8px;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            width: 20px;
+            height: 20px;
+            background: url('../img/games-x.svg') center;
+            cursor: pointer;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 25px 20px;
+        background-color: #fff;
+        border-radius: 12px;
+        transition: .3s ease-in-out transform;
+
+        &-new {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 2px dashed #D6BBFB;
+            background-color: transparent;
+        }
+        &:hover {
+            transform: scale(102%);
+        }
+    }
+    &__btn-add {
+        margin-top: 20px;
+        padding: 10px 60px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+        background-color: #7F56D9;
+        border-radius: 8px;
+    }
+    &__box {
+        margin-bottom: 15px;
+    }
+    &__img {
+        margin-top: -15px;
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: 20px;
+    }
+    &__span {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 2px 8px;
+        padding-left: 20px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        border-radius: 4px;
         
+        &::before {
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 6px;
+            top: 8px;
+            left: 8px;
+        }
+        &-blue {
+            color: #0086C9;
+            background-color: #F0F9FF;
+            &::before {
+                background-image: url('../img/games-point-blue.svg');
+            }
+        }
+        &-red {
+            color: #E31B53;
+            background-color: #FFF1F3;
+            &::before {
+                background-image: url('../img/games-point-red.svg');
+            }
+        }
+        &-orange {
+            color: #DC6803;
+            background-color: #FFFAEB;
+            &::before {
+                background-image: url('../img/games-point-orange.svg');
+            }
+        }
+        &-purple {
+            color: #7F56D9;
+            background-color: #F9F5FF;
+            &::before {
+                background-image: url('../img/games-point-purple.svg');
+            }
+        }
+        &-green {
+            color: #039855;
+            background-color: #ECFDF3;
+            &::before {
+                background-image: url('../img/games-point-green.svg');
+            }
+        }
+    }
+    &__heading {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    &__stars {
+        display: flex;
+        margin-bottom: 15px;
+    }
+    &__star {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 4px;
+    }
+    &__number {
+        margin-left: 4px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #475467;
+    }
+    &__info {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #98A2B3;
+    }
+    &__prices {
+        display: flex;
+        min-height: 37px;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 17px;
+        border-top: 1px solid #EAECF0;
+    }
+    &__price {
+        display: flex;
+    }
+    &__old {
+        margin-right: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #D0D5DD;
+    }
+    &__new {
+        font-weight: 600;
+        font-size: 16px;
+        color: #101828;
+    }
+    &__sale {
+        padding: 4px 6px;
+        font-weight: 600;
+        font-size: 12px;
+        color: #FFFFFF;
+        background-color: #669F2A;
+        border-radius: 4px;
+        transform: scale(120%);
+    }
+    &__nav {
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 8px;
+        text-align: center;
     }
 }
