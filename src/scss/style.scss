@@ -15,7 +15,7 @@ $colorHover: #7F56D9;
 @font-face {
     font-family: 'Inter';
     font-weight: '700';
-    src: url('../fonts/Inter-Bold.woff2');
+    src: url('../fonts/Inter-SemiBold.woff2');
 }
 
 * {
@@ -555,9 +555,6 @@ button {
         height: 20px;
         fill: #7F56D9;
     }
-    &__content {
-        height: auto;
-    }
     &__discription {
         margin-bottom: 20px;
         font-weight: 400;
@@ -602,18 +599,104 @@ button {
 }
 
 .ui-accordion-content {
+    height: auto !important;
     background-color: transparent;
     border: none;
 }
 
 .ui-state-active {
-    .questions__closed {
+    .questions__opened {
         display: block;
     }
 }
 
 .ui-accordion-header-collapsed {
-    .questions__opened {
+    .questions__closed {
         display: block;
+    }
+}
+
+.footer {
+    background-color: #1D2939;
+
+    .container {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+    &__subscription {
+        display: grid;
+        padding-bottom: 55px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        border-bottom: 1px solid #344054;
+    }
+    &__title {
+        margin-bottom: 4px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    &__info {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #98A2B3;
+    }
+    &__form {
+        display: flex;
+    }
+    &__input {
+        width: 100%;
+        margin-right: 8px;
+        padding: 10px 18px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+
+        &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            color: #98A2B3;
+        }
+    }
+    &__btn {
+        padding: 10px 18px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+        background-color: #7F56D9;
+        border-radius: 8px;
+    }
+    &__categories {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 56px;
+        padding-bottom: 80px;
+    }
+    &__heading {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #98A2B3;
+    }
+    &__list {
+        display: grid;
+        grid-gap: 8px;
+    }
+    &__item {
+        font-weight: 500;
+        font-size: 16px;
+        color: #F2F4F7;
+        transition: .3s ease-in-out transform;
+
+        &:hover {
+            transform: scale(105%);
+        }
+    }
+    &__copyright {
+        font-weight: 400;
+        font-size: 16px;
+        color: #667085;
+        
     }
 }
