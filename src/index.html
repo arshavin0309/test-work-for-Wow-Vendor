@@ -1,4 +1,3 @@
-<!-- доделать звезды, есть половинками -->
 <!-- фоновый цвет main -->
 
 <!DOCTYPE html>
@@ -8,7 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>game Vendor</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script defer src="js/index.js"></script>
 </head>
 <body>
@@ -542,13 +545,90 @@
                         <div class="games__prices"></div>
                     </a>
                 </div>
-                <nav class="games__nav">кол-во страниц</nav>
+                <nav class="games__nav">
+                    <a href="" class="games__page">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#pagination-back"></use>
+                        </svg>
+                    </a>
+                    <a href="" class="games__page games__page-active">1</a>
+                    <a href="" class="games__page">2</a>
+                    <a href="" class="games__page">3</a>
+                    <a href="" class="games__page">4</a>
+                    <a href="" class="games__page">5</a>
+                    <div class="games__tab">...</div>
+                    <a href="" class="games__page">99</a>
+                    <a href="" class="games__page">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#pagination-next"></use>
+                        </svg>
+                    </a>
+                </nav>
             </div>
         </section>
         <section class="questions">
             <div class="container">
                 <h2 class="questions__title">Frequently asked questions</h2>
                 <p class="questions__info">Everything you need to know about the games.</p>
+                <div class="questions__accordion" id="accordion">
+                    <div class="questions__box">
+                        <h3 class="questions__heading">How does work?</h3>
+                        <svg class="questions__closed">
+                            <use xlink:href="img/sprite.svg#accordion-plus"></use>
+                        </svg>
+                        <svg class="questions__opened">
+                            <use xlink:href="img/sprite.svg#accordion-minus"></use>
+                        </svg>
+                    </div>
+                    <div class="questons__content"></div>
+
+                    <div class="questions__box">
+                        <h3 class="questions__heading">What is a game?</h3>
+                        <svg class="questions__closed">
+                            <use xlink:href="img/sprite.svg#accordion-plus"></use>
+                        </svg>
+                        <svg class="questions__opened">
+                            <use xlink:href="img/sprite.svg#accordion-minus"></use>
+                        </svg>
+                    </div>
+                    <div class="questons__content">
+                        <p class="questions__discription">
+                            A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset. A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback. This feedback is shown on a video display device, such as a TV set, monitor, touchscreen, or virtual reality headset.
+                        </p>
+                        <ul class="questions__list">
+                            <li class="questions__item">motion sensing device,</li>
+                            <li class="questions__item">controller,</li>
+                            <li class="questions__item">keyboard,</li>
+                            <li class="questions__item">joystick.</li>
+                        </ul>
+                        <h4 class="questions__feedback">Visual feedback.</h4>
+                        <p class="questions__discription">
+                            A video game or computer game is an electronic game that involves interaction with a user interface or input device – such as a joystick, controller, keyboard, or motion sensing device – to generate visual feedback.
+                        </p>
+                    </div>
+                    
+                    <div class="questions__box">
+                        <h3 class="questions__heading">Is there a free trial available?</h3>
+                        <svg class="questions__closed">
+                            <use xlink:href="img/sprite.svg#accordion-plus"></use>
+                        </svg>
+                        <svg class="questions__opened">
+                            <use xlink:href="img/sprite.svg#accordion-minus"></use>
+                        </svg>
+                    </div>
+                    <div class="questons__content"></div>
+
+                    <div class="questions__box">
+                        <h3 class="questions__heading">How does billing work?</h3>
+                        <svg class="questions__closed">
+                            <use xlink:href="img/sprite.svg#accordion-plus"></use>
+                        </svg>
+                        <svg class="questions__opened">
+                            <use xlink:href="img/sprite.svg#accordion-minus"></use>
+                        </svg>
+                    </div>
+                    <div class="questons__content"></div>
+                </div>
             </div>
         </section>
     </main>

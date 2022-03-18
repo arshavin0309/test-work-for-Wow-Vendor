@@ -464,9 +464,156 @@ button {
         transform: scale(120%);
     }
     &__nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: #FFFFFF;
         border-radius: 12px;
         padding: 8px;
         text-align: center;
+    }
+    &__page {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #101828;
+        border-radius: 8px;
+
+        svg {
+            width: 36px;
+            height: 36px;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:hover {
+            background-color: #F9F5FF;
+        }
+        &-active {
+            background-color: #7F56D9;
+            
+            &:hover {
+                background-color: #7F56D9;
+            }
+        }
+    }
+    &__tab {
+        margin-right: 10px;
+    }
+}
+
+.questions {
+    .container {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 32px;
+        text-align: center;
+        color: #101828;
+    }
+    &__info {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        color: #667085;
+    }
+    &__box {
+        display: flex !important;
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+
+        &:not(:first-child) {
+            border-top: 1px solid #EAECF0;
+        }
+    }
+    &__heading {
+        font-weight: 600;
+        font-size: 18px;
+        color: #101828;
+    }
+    &__closed {
+        display: none;
+        width: 20px;
+        height: 20px;
+        fill: #7F56D9;
+    }
+    &__opened {
+        display: none;
+        width: 20px;
+        height: 20px;
+        fill: #7F56D9;
+    }
+    &__content {
+        height: auto;
+    }
+    &__discription {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #667085;
+    }
+    &__list {
+        margin-bottom: 30px;
+    }
+    &__item {
+        position: relative;
+        padding-left: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #667085;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            top: 10px;
+            left: 0;
+            background-image: url('../img/games-point-purple.svg');
+        }
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+    &__feedback {
+        margin-bottom: 16px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #101828;
+    }
+}
+
+.ui-icon {
+    display: none;
+}
+
+.ui-accordion-content {
+    background-color: transparent;
+    border: none;
+}
+
+.ui-state-active {
+    .questions__closed {
+        display: block;
+    }
+}
+
+.ui-accordion-header-collapsed {
+    .questions__opened {
+        display: block;
     }
 }
