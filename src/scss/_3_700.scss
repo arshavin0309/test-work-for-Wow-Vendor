@@ -1,0 +1,11 @@
+@media (max-width: 780px) {
+    .hero {
+        &__box {
+            background-image: url('../img/hero-mobile.jpg');
+            
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

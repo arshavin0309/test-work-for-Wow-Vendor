@@ -131,14 +131,16 @@ button {
             width: 13px;
             height: 16px;
         }
-        &:hover {
+        &:hover,
+        &:focus {
             fill: $colorHover;
             color: $colorHover;
         }
     }
     &__logo {
         transition: .3s ease-in-out transform;
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(110%);
         }
     }
@@ -157,7 +159,8 @@ button {
             width: 20px;
             height: 20px;
         }
-        &:hover {
+        &:hover,
+        &:focus {
             fill: $colorHover;
             color: $colorHover;
         }
@@ -284,9 +287,11 @@ button {
         }
     }
     &__input {
+        height: 40px;
         padding: 10px 18px;
         border: 1px solid #D0D5DD;
         border-radius: 8px;
+        background-color: #fff;
         cursor: pointer;
 
         &::placeholder {
@@ -351,7 +356,8 @@ button {
             border: 2px dashed #D6BBFB;
             background-color: transparent;
         }
-        &:not(:first-child):hover {
+        &:not(:first-child):hover,
+        &:not(:first-child):focus {
             transform: scale(102%);
         }
     }
@@ -517,13 +523,15 @@ button {
         &:not(:last-child) {
             margin-right: 10px;
         }
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: #F9F5FF;
         }
         &-active {
             background-color: #7F56D9;
             
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: #7F56D9;
             }
         }
@@ -654,6 +662,9 @@ button {
         padding-top: 55px;
         padding-bottom: 65px;
     }
+    &__nav {
+        display: none;
+    }
     &__subscription {
         display: grid;
         padding-bottom: 55px;
@@ -676,6 +687,7 @@ button {
     }
     &__form {
         display: flex;
+        max-height: 50px;
     }
     &__input {
         width: 100%;
@@ -721,7 +733,8 @@ button {
         color: #F2F4F7;
         transition: .3s ease-in-out transform;
 
-        &:hover {
+        &:hover,
+        &:focus {
             transform: scale(105%);
         }
     }

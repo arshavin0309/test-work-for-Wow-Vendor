@@ -56,6 +56,46 @@
     }
 
     .footer {
+        .container {
+            padding-bottom: 100px;
+        }
+        &__nav {
+            position: fixed;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            bottom: 0;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 14px;
+            color: #98A2B3;
+            background-color: #fff;
+        }
+        &__link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease-in-out color;
+
+            &:hover,
+            &:focus {
+                color: #7F56D9;
+
+                svg {
+                    fill: #7F56D9;
+                }
+            }
+        }
+        &__svg {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 10px;
+            fill: #101828;
+            transition: .3s ease-in-out fill;
+        }
         &__subscription {
             grid-template-columns: 1fr;
         }
