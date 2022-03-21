@@ -17,9 +17,19 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="" class="header__sale">
+            <div class="header__sale">
+                <button class="header__btn">
+                    <svg class="header__left">
+                        <use xlink:href="img/sprite.svg#arrow-left"></use>
+                    </svg>
+                </button>
                 Refer a friend and get $10 off! 🔥 Offer ends February 27!
-            </a>
+                <button class="header__btn">
+                    <svg class="header__right">
+                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
             <div class="header__info">
                 <address class="header__address">
                     <svg>
@@ -580,7 +590,11 @@
                             <use xlink:href="img/sprite.svg#accordion-minus"></use>
                         </svg>
                     </div>
-                    <div class="questons__content"></div>
+                    <div class="questons__content">
+                        <p class="questions__discription">
+                            it's still empty here
+                        </p>
+                    </div>
 
                     <div class="questions__box">
                         <h3 class="questions__heading">What is a game?</h3>
@@ -616,7 +630,11 @@
                             <use xlink:href="img/sprite.svg#accordion-minus"></use>
                         </svg>
                     </div>
-                    <div class="questons__content"></div>
+                    <div class="questons__content">
+                        <p class="questions__discription">
+                            it's still empty here
+                        </p>
+                    </div>
 
                     <div class="questions__box">
                         <h3 class="questions__heading">How does billing work?</h3>
@@ -627,7 +645,11 @@
                             <use xlink:href="img/sprite.svg#accordion-minus"></use>
                         </svg>
                     </div>
-                    <div class="questons__content"></div>
+                    <div class="questons__content">
+                        <p class="questions__discription">
+                            it's still empty here
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -640,7 +662,7 @@
                     <p class="footer__info">We’ll send you a nice letter one per week. No spam.</p>
                 </div>
                 <form class="footer__form">
-                    <input type="text" class="footer__input" placeholder="Enter email">
+                    <input type="email" class="footer__input" placeholder="Enter email" required>
                     <button type="submit" class="footer__btn">Subscribe</button>
                 </form>
             </div>
