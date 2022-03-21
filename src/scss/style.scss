@@ -217,6 +217,7 @@ button {
         background: url('../img/hero.jpg');
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
         border-radius: 16px;
 
         &::after {
@@ -226,7 +227,7 @@ button {
             right: 8%;
             bottom: 0;
             width: 710px;
-            height: 450px;
+            height: 448px;
             background: url('../img/heroes.svg') no-repeat;
             background-size: cover;
         }
