@@ -206,16 +206,19 @@ button {
         padding: 70px;
         background: url('../img/hero.jpg');
         background-size: cover;
+        background-position: center;
         border-radius: 16px;
 
         &::after {
             content: '';
             position: absolute;
             right: 100px;
-            bottom: 0;
+            right: 8%;
+            bottom: -2px;
             width: 710px;
             height: 450px;
-            background: url('../img/heroes.svg');
+            background: url('../img/heroes.svg') no-repeat;
+            background-size: contain;
         }
     }
     &__content {
