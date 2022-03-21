@@ -1,7 +1,37 @@
-@media (max-width: 320px) {
+@media (max-width: 630px) {
     .container {
         max-width: 320px;
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .header {
+        &__sale {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+
+    .hero {
+        &__nav {
+            margin-bottom: 15px;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__box {
+            padding: 30px;
+
+            &::after {
+                display: none;
+            }
+        }
+        &__heading {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__btn {
+            width: 100%;
+        }
     }
 }

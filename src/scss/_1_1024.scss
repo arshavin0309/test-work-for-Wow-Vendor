@@ -20,11 +20,11 @@
             padding-bottom: 20px;
         }
         &__box {
-            max-height: 380px;
+            padding: 60px;
 
             &::after {
-                max-width: 606px;
-                max-height: 384px;
+                width: 606px;
+                height: 384px;
                 right: 4%;
             }
         }

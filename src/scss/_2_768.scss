@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
     .container {
         max-width: 768px;
         padding-left: 24px;
@@ -6,7 +6,14 @@
     }
 
     .header {
+        &__sale {
+            font-size: 14px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
         &__info {
+            padding-top: 15px;
+            padding-bottom: 15px;
             justify-content: center;
         }
         &__address {
@@ -17,6 +24,40 @@
         }
         &__list {
             display: none;
+        }
+    }
+
+    .hero {
+        .container {
+            padding-top: 30px;
+        }
+        &__box {
+            padding: 40px;
+
+            &::after {
+                width: 445px;
+                height: 333px;
+                right: 0;
+            }
+        }
+        &__heading {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__content {
+            max-width: 280px;
+        }
+    }
+
+    .games {
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .footer {
+        &__subscription {
+            grid-template-columns: 1fr;
         }
     }
 }
