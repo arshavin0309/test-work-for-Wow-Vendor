@@ -1,0 +1,117 @@
+@media (max-width: 630px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header {
+        &__sale {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+
+    .hero {
+        &__nav {
+            margin-bottom: 15px;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__box {
+            padding: 30px;
+
+            &::after {
+                display: none;
+            }
+        }
+        &__heading {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__btn {
+            width: 100%;
+        }
+    }
+
+    .games {
+        &__form {
+            grid-template-columns: 1fr;
+        }
+        &__label {
+            &:not(:first-child) {
+                display: none;
+            }
+        }
+        &__filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            font-size: 16px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+                background: url('../img/filter.svg') no-repeat;
+            }
+        }
+        &__list {
+            grid-template-columns: 1fr;
+            grid-gap: 15px;
+        }
+        &__item {
+            &-new {
+                padding: 40px;
+            }
+        }
+        &__nav {
+            display: none;
+        }
+        &__more {
+            display: block;
+            width: 100%;
+            padding: 12px 70px;
+            font-weight: 500;
+            font-size: 16px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+    }
+
+    .questions {
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+            text-align: left;
+        }
+        &__info {
+            text-align: left;
+        }
+    }
+
+    .footer {
+        .container {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &__subscription {
+            padding-bottom: 30px;
+        }
+        &__categories {
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+        &__form {
+            flex-direction: column;
+        }
+        &__input {
+            margin-bottom: 8px;
+        }
+    }
+}

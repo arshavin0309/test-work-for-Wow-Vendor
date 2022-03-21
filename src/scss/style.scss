@@ -29,6 +29,10 @@ $colorHover: #7F56D9;
     color: black;
 }
 
+body {
+    min-width: 320px;
+}
+
 button {
     cursor: pointer;
     transition: .3s ease-in-out transform;
@@ -292,6 +296,9 @@ button {
             color: #98A2B3;
         }
     }
+    &__filter {
+        display: none;
+    }
     &__tags {
         display: flex;
         flex-wrap: wrap;
@@ -442,6 +449,9 @@ button {
         font-size: 12px;
         line-height: 18px;
         color: #475467;
+    }
+    &__more {
+        display: none;
     }
     &__info {
         font-weight: 400;
@@ -613,6 +623,10 @@ button {
 
 .ui-icon {
     display: none;
+}
+
+.ui-accordion-header {
+    outline: none;
 }
 
 .ui-accordion-content {
